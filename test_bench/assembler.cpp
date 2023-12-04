@@ -224,12 +224,10 @@ void generate_binary(string ip_file,string op_file){
 	ll pc = 5;
 	string temp;
 	while(getline(file,temp)){
-		
 		if((temp[0] >= 'a' && temp[0] <= 'z') || (temp[0] >= 'A' && temp[0] <= 'Z')){
 			// temp.back() = '\0';
 			auto it = give_first_word(temp);
 			string &s = it.first;
-			
 			if(temp[it.second+1] == ':')continue;
 			assert(temp[it.second+1] == ' ');
 			if(format_map.find(s) == format_map.end()){
@@ -260,6 +258,7 @@ int main(){
 	//string filename = "test.s";
 	string filename;
 	// string outfile;
+	cout << "Enter the filename of the .s file: ";
 	cin >> filename;
 	// ofstream ofile;
 
